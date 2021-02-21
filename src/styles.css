@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Actor';
+  src: url('assets/fonts/Actor/Actor-Regular.ttf');
+}
