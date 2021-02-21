@@ -62,7 +62,7 @@
 
       <section id="bio" class="mb-24">
         <div
-          class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-flow-col gap-6 place-items-center"
+          class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-flow-col gap-x-6 gap-y-8 place-items-center"
         >
           <div>
             <h2 class="text-2xl sm:text-4xl font-serif font-bold mb-6">Bio</h2>
@@ -83,7 +83,7 @@
 
             <a
               href="assets/Aerrol_Resume_1-25-21.pdf"
-              class="bg-black text-white px-6 py-2"
+              class="block sm:inline px-6 py-2 bg-black text-white text-center"
               >View resume</a
             >
           </div>
@@ -104,15 +104,40 @@
         </h2>
 
         <form>
-          <input type="text" name="name" placeholder="Name" />
-          <input type="email" name="email" placeholder="Email" />
-          <input type="text" name="subject" placeholder="Subject" />
-          <textarea
-            name="message"
-            cols="30"
-            rows="10"
-            placeholder="Message"
-          ></textarea>
+          <div
+            class="grid grid-rows-3 sm:grid-cols-2 gap-3 sm:grid-flow-col mb-4"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="p-1 border-2 border-black"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="p-1 border-2 border-black"
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              class="p-1 border-2 border-black"
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows="5"
+              class="row-span-3 resize-none p-1 border-2 border-black"
+            ></textarea>
+          </div>
+
+          <div class="flex justify-end">
+            <button class="w-full sm:w-auto px-6 py-2 bg-black text-white">
+              Send message
+            </button>
+          </div>
         </form>
       </section>
     </main>
