@@ -32,6 +32,9 @@ module.exports = {
         'serif',
       ],
     },
+    boxShadow: {
+      offset: `1rem 1rem 0 0 ${colors.orange[300]}`,
+    },
     extend: {
       colors: {
         orange: colors.orange,
