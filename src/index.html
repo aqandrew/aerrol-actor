@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
-    <header>
-      <a href="/"
-        ><h1 class="text-2xl font-serif font-bold">Aerrol Ampeloquio</h1></a
-      >
-      <p>Actor, Writer, Director</p>
+  <body
+    class="max-w-screen-sm lg:max-w-screen-lg mx-auto p-4 lg:mt-8 bg-blue-100"
+  >
+    <header class="flex justify-between items-center mb-16">
+      <a href="/">
+        <h1
+          class="text-2xl lg:text-4xl font-serif font-bold md:pb-1 border-b-4 lg:border-b-8 border-orange-400"
+        >
+          Aerrol Ampeloquio
+        </h1>
+        <p class="lg:text-xl">Actor, Writer, Director</p>
+      </a>
 
       <nav class="text-2xl font-serif font-bold">
-        <ul>
+        <button class="sm:hidden">Menu</button>
+
+        <!-- TODO Move to absolute on mobile -->
+        <ul class="flex flex-row gap-5">
           <li>
             <a href="#reel">Reel</a>
           </li>
@@ -33,9 +42,13 @@
       </nav>
     </header>
 
-    <main>
-      <section id="reel">
-        <h2 class="text-2xl font-serif font-bold">Reel</h2>
+    <main class="max-w-4xl mx-auto">
+      <section id="reel" class="mb-24">
+        <h2 class="text-2xl sm:text-4xl font-serif font-bold mb-6">Reel</h2>
+
+        <!-- TODO Offset orange shadow -->
+        <!-- TODO Does this work better? -->
+        <!-- class="w-full md:h-96" -->
         <iframe
           width="560"
           height="315"
@@ -43,35 +56,52 @@
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
+          class="max-w-full mx-auto bg-gray-700 border-4 border-black"
         ></iframe>
       </section>
 
-      <section id="bio">
-        <h2 class="text-2xl font-serif font-bold">Bio</h2>
-        <p>
-          Aerrol Ampeloquio is an actor, writer, and director based in Los
-          Angeles, California. He has released a PSA on gender issues and two
-          short films. His directorial debut is "Forgetting You", a short film
-          in which he plays a man coping with a breakup from a toxic
-          relationship. He currently attends the Conservatory program at The
-          Second City: Hollywood and interns at the Studio for Performing Arts
-          in Los Angeles.
-        </p>
-        <p>
-          Aerrol's goal in the world of entertainment is to create complex
-          characters that challenge audiences' views by allowing them to look at
-          life from different perspectives.
-        </p>
-        <img
-          src="assets/img/Fifth.JPG"
-          alt="Aerrol in a red polo sitting on a curb"
-        />
+      <section id="bio" class="mb-24">
+        <div
+          class="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-flow-col gap-6 items-center"
+        >
+          <div>
+            <h2 class="text-2xl sm:text-4xl font-serif font-bold mb-6">Bio</h2>
+            <p class="mb-4">
+              Aerrol Ampeloquio is an actor, writer, and director based in Los
+              Angeles, California. He has released a PSA on gender issues and
+              two short films. His directorial debut is "Forgetting You", a
+              short film in which he plays a man coping with a breakup from a
+              toxic relationship. He currently attends the Conservatory program
+              at The Second City: Hollywood and interns at the Studio for
+              Performing Arts in Los Angeles.
+            </p>
+            <p class="mb-6">
+              Aerrol's goal in the world of entertainment is to create complex
+              characters that challenge audiences' views by allowing them to
+              look at life from different perspectives.
+            </p>
 
-        <a href="assets/Aerrol_Resume_1-25-21.pdf">View resume</a>
+            <a
+              href="assets/Aerrol_Resume_1-25-21.pdf"
+              class="bg-black text-white px-6 py-2"
+              >View resume</a
+            >
+          </div>
+
+          <!-- TODO Offset orange shadow -->
+          <img
+            src="assets/img/Fifth.JPG"
+            alt="Aerrol in a red polo sitting on a curb"
+            class="border-4 border-black"
+          />
+        </div>
       </section>
 
-      <section id="contact">
-        <h2 class="text-2xl font-serif font-bold">Work with Aerrol</h2>
+      <section id="contact" class="mb-24">
+        <h2 class="text-2xl sm:text-4xl font-serif font-bold mb-6">
+          Work with Aerrol
+        </h2>
+
         <form>
           <input type="text" name="name" placeholder="Name" />
           <input type="email" name="email" placeholder="Email" />
@@ -86,14 +116,19 @@
       </section>
     </main>
 
-    <footer class="font-serif font-bold">
+    <footer
+      class="max-w-4xl mx-auto flex flex-row justify-between font-serif font-bold"
+    >
       <a href="/" class="text-lg">Aerrol Ampeloquio</a>
-      <a href="https://www.youtube.com/channel/UCJIKdKdKPjTNAHV8mNGGUZw"
-        >YouTube</a
-      >
-      <a href="https://www.instagram.com/ayyyroll/">Instagram</a>
-      <a href="">Actors Access</a>
-      <a href="">Backstage</a>
+
+      <div class="flex flex-row justify-between gap-5">
+        <a href="https://www.youtube.com/channel/UCJIKdKdKPjTNAHV8mNGGUZw"
+          >YouTube</a
+        >
+        <a href="https://www.instagram.com/ayyyroll/">Instagram</a>
+        <a href="">Actors Access</a>
+        <a href="">Backstage</a>
+      </div>
     </footer>
   </body>
 </html>

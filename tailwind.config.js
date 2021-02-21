@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: ['./src/index.html'],
   darkMode: false, // or 'media' or 'class'
@@ -30,7 +32,11 @@ module.exports = {
         'serif',
       ],
     },
-    extend: {},
+    extend: {
+      colors: {
+        orange: colors.orange,
+      },
+    },
   },
   variants: {
     extend: {},
