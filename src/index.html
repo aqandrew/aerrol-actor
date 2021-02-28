@@ -11,7 +11,7 @@
   <body
     class="max-w-screen-sm lg:max-w-screen-lg mx-auto p-8 mb-8 lg:mt-4 bg-blue-100"
   >
-    <header class="flex justify-between items-center mb-16">
+    <header class="flex justify-between items-stretch sm:items-center mb-16">
       <a href="/">
         <h1
           class="text-2xl lg:text-4xl font-serif font-bold lg:pb-1 border-b-4 lg:border-b-8 border-orange-400"
@@ -24,21 +24,38 @@
         </p>
       </a>
 
-      <nav class="text-2xl font-serif font-bold">
-        <button class="sm:hidden">Menu</button>
+      <nav class="text-3xl sm:text-xl lg:text-2xl font-serif font-bold">
+        <button id="nav-toggle" onclick="toggleMenu()" class="sm:hidden h-full">
+          Menu
+        </button>
 
-        <!-- TODO Move to absolute on mobile -->
-        <ul class="flex flex-row gap-5">
-          <li>
+        <ul
+          id="nav-menu"
+          class="absolute right-0 left-0 h-full invisible sm:visible sm:static sm:flex flex-row gap-5 p-8 sm:p-0 bg-blue-100"
+          aria-expanded="false"
+        >
+          <li
+            class="p-4 sm:p-0 border-t-2 border-b-2 border-black sm:border-none text-center"
+            onclick="closeMenu()"
+          >
             <a href="#reel">Reel</a>
           </li>
-          <li>
+          <li
+            class="p-4 sm:p-0 border-b-2 border-black sm:border-none text-center"
+            onclick="closeMenu()"
+          >
             <a href="#bio">Bio</a>
           </li>
-          <li>
+          <li
+            class="p-4 sm:p-0 border-b-2 border-black sm:border-none text-center"
+            onclick="closeMenu()"
+          >
             <a href="assets/Aerrol_Resume_2-22-21_Official.pdf">Resume</a>
           </li>
-          <li>
+          <li
+            class="p-4 sm:p-0 border-b-2 border-black sm:border-none text-center"
+            onclick="closeMenu()"
+          >
             <a href="#contact">Contact</a>
           </li>
         </ul>
@@ -208,5 +225,6 @@
         <a href="https://www.backstage.com/u/aerrol-ampeloquio/">Backstage</a>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

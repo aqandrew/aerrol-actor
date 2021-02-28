@@ -6,3 +6,11 @@
   font-family: 'Actor';
   src: url('assets/fonts/Actor/Actor-Regular.ttf');
 }
+
+body.no-scroll {
+  @apply overflow-hidden;
+}
+
+#nav-menu.active {
+  @apply visible translate-y-0;
+}
