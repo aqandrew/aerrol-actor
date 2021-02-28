@@ -14,7 +14,7 @@ const closeMenu = () => {
   document.body.classList.remove('no-scroll');
 };
 
-const handleResize = () => {
+window.onresize = (event) => {
   if (
     window.innerWidth >= SCREEN_SMALL &&
     navMenu.classList.contains('active')
