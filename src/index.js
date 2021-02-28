@@ -1,3 +1,5 @@
+const SCREEN_SMALL = 640;
+
 const navMenu = document.getElementById('nav-menu');
 
 const toggleMenu = () => {
@@ -10,4 +12,13 @@ const closeMenu = () => {
   navMenu.classList.remove('active');
   navMenu.setAttribute('aria-expanded', false);
   document.body.classList.remove('no-scroll');
+};
+
+const handleResize = () => {
+  if (
+    window.innerWidth >= SCREEN_SMALL &&
+    navMenu.classList.contains('active')
+  ) {
+    closeMenu();
+  }
 };
