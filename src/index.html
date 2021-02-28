@@ -135,30 +135,38 @@
           <div
             class="grid grid-rows-3 sm:grid-cols-2 gap-3 sm:grid-flow-col mb-4"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              class="p-1 border-2 border-black"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              class="p-1 border-2 border-black"
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              class="p-1 border-2 border-black"
-            />
-            <textarea
-              name="message"
-              placeholder="Message"
-              rows="5"
-              class="row-span-3 resize-none p-1 border-2 border-black"
-            ></textarea>
+            <label class="text-sm">
+              Name
+              <input
+                type="text"
+                name="name"
+                class="block w-full p-1 border-2 border-black text-base"
+              />
+            </label>
+            <label class="text-sm">
+              Email
+              <input
+                type="email"
+                name="email"
+                class="block w-full p-1 border-2 border-black text-base"
+              />
+            </label>
+            <label class="text-sm"
+              >Subject
+              <input
+                type="text"
+                name="subject"
+                class="block w-full p-1 border-2 border-black text-base"
+              />
+            </label>
+            <label class="row-span-3 flex flex-col text-sm">
+              Message
+              <textarea
+                name="message"
+                rows="5"
+                class="flex-1 resize-none p-1 border-2 border-black text-base"
+              ></textarea>
+            </label>
           </div>
 
           <div class="flex justify-end">
